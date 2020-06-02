@@ -140,7 +140,8 @@
         db.transaction(projectStore, "readwrite").objectStore(projectStore).add(projects, projectsKey);
         //aslo add empty eventsarray
         db.transaction(eventStore, "readwrite").objectStore(eventStore).add("[]", eventsKey);
-        
+        $('#project-tag-list1').html('')
+        addProjects()
       } else {
         // else retrieve from database and set current projects to this
         projects = event.target.result;
