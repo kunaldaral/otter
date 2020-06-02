@@ -139,7 +139,7 @@
         first_login = true;
         db.transaction(projectStore, "readwrite").objectStore(projectStore).add(projects, projectsKey);
         //aslo add empty eventsarray
-        db.transaction(eventStore, "readwrite").objectStore(eventStore).add(allevents, eventsKey);
+        db.transaction(eventStore, "readwrite").objectStore(eventStore).add("[]", eventsKey);
         
       } else {
         // else retrieve from database and set current projects to this
